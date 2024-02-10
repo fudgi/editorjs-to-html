@@ -1,4 +1,3 @@
-import './index.pcss';
 import {CodeBlock, Props} from "../interfaces";
 import { baseBlock } from "../utils"
 

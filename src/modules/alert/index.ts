@@ -1,4 +1,3 @@
-import './index.pcss';
 import {AlertBlock, Props} from "../interfaces";
 import { baseBlock } from "../utils"
 

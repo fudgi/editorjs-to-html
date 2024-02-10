@@ -1,4 +1,3 @@
-import './index.pcss';
 import {Props, WarningBlock} from "../interfaces";
 import { baseBlock } from "../utils"
 

@@ -1,4 +1,3 @@
-import './index.pcss';
 import {CheckListBlock, Props} from "../interfaces";
 import { baseBlock } from "../utils"
 

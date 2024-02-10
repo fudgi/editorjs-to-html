@@ -1,43 +1,15 @@
-import {transformBlocks} from "./modules";
-import { OutputBlockData } from "./modules/interfaces"
+import {transformBlocks} from './modules';
+import { OutputData } from './modules/interfaces'
 
-export interface OutputData {
-    /**
-     * Editor's version
-     */
-    version?: string;
-
-    /**
-     * Timestamp of saving in milliseconds
-     */
-    time?: number;
-
-    /**
-     * Saved Blocks
-     */
-    blocks: OutputBlockData[];
-}
-
-const parser = (plugins = {}) => {
+export default function parse(data: OutputData, plugins = {}) {
     const parsers = Object.assign({}, transformBlocks, plugins);
 
-    return {
-        parse: ({ blocks }: OutputData) => {
-            return blocks.map(block => {
-                if (!parsers[block.type]) {
-                    debugger;
-                }
-                return parsers[block.type]
-                    ? parsers[block.type](block)
-                    : 'Sorry, not realized yet';
-            }).join('')
-        },
-        parseOne: (block) => {
-            return parsers[block.type]
-                ? parsers[block.type](block)
-                : 'Sorry, not realized yet';
-        },
+    if (!data || !data.blocks) {
+        return '';
     }
+    return data.blocks.map(block => {
+        return parsers[block.type]
+          ? parsers[block.type](block)
+          : `Unknown block type: ${block.type}`;
+    }).join('');
 }
-
-export default parser;

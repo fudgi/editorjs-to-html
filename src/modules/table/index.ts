@@ -1,6 +1,5 @@
 import {Props, TableBlock} from '../interfaces';
 import { baseBlock } from '../utils';
-import './index.pcss';
 
 export function table ({ data }: Props<TableBlock>) {
   const item = `<div class="cdx-block tc-wrap tc-wrap--readonly">

@@ -1,14 +1,14 @@
-import './index.pcss';
 import {table} from "./table";
 import {delimiter} from "./delimeter";
 import {header} from "./header";
+import {drawing} from "./drawing";
 import {nestedList} from "./nestedList";
 import {paragraph} from "./paragraph";
 import {alert} from "./alert";
 import {checklist} from "./checklist";
 import {code} from "./code";
 import {image} from "./image";
-import {linkTool} from "./LinkTool";
+import {linkTool} from "./linkTool";
 import {quote} from "./quote";
 import {raw} from "./raw";
 import {warning} from "./warning";
@@ -20,8 +20,9 @@ export const transformBlocks = {
     code,
     delimiter,
     header,
+    drawing,
     image,
-    LinkTool: linkTool,
+    linkTool,
     list: nestedList,
     paragraph,
     quote,
