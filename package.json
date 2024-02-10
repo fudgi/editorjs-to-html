@@ -1,8 +1,8 @@
 {
-  "name": "editorjs-to-html",
-  "version": "1.0.4",
+  "name": "@pocket-architect/editorjs-to-html",
+  "version": "0.0.1",
   "description": "parse editorjs content format to html with saving editorjs markup format",
-  "main": "./build/Parser.esm.js",
+  "main": "./build/Parser.node.js",
   "types": "./build/index.d.ts",
   "directories": {
     "test": "test",
