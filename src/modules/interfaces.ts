@@ -115,6 +115,11 @@ export interface CodeBlock {
   code: string;
 }
 
+export interface DrawingBlock {
+  svg: string;
+  caption: string;
+}
+
 export interface LinkToolBlockMeta {
   image?: File;
   title?: string;
