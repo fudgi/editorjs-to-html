@@ -8,6 +8,10 @@
     "test": "test",
     "rollup": ""
   },
+  "files": [
+    "scss",
+    "build"
+  ],
   "scripts": {
     "prepublishOnly": "npm run build:release && npm version patch",
     "test": "jest",

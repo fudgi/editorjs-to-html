@@ -1,0 +1,49 @@
+.cdx-warning {
+    --cdx-warning-color: var(--bs-success);
+
+    &.info {
+        --cdx-warning-color: var(--bs-info);
+    }
+    &.danger {
+        --cdx-warning-color: var(--bs-danger);
+    }
+    &.warning {
+        --cdx-warning-color: var(--bs-warning);
+    }
+
+    display: flex;
+    padding: 0;
+    background-color: #f5f7f9;
+    padding-right: 24px;
+    border-left: 4px solid var(--cdx-warning-color);
+    border-radius: 4px;
+
+    &__content {
+        flex: 1 1 0%;
+        flex-direction: column;
+        display: flex;
+        min-width: 0;
+        padding: 16px 0;
+    }
+
+    &__icon {
+        color: var(--cdx-warning-color);
+        width: 20px;
+        height: 20px;
+        align-self: start;
+        cursor: pointer;
+        margin: 14px 11px;
+
+        path {
+            stroke: none;
+        }
+    }
+
+    &__message {
+        min-height: 85px;
+    }
+
+    &__title {
+        margin-bottom: 6px;
+    }
+}
