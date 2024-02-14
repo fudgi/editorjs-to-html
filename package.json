@@ -1,6 +1,6 @@
 {
   "name": "@pocket-architect/editorjs-to-html",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "parse editorjs content format to html with saving editorjs markup format",
   "main": "./build/Parser.node.js",
   "types": "./build/index.d.ts",
@@ -9,8 +9,10 @@
     "rollup": ""
   },
   "scripts": {
+    "prepublishOnly": "npm run build:release && npm version patch",
     "test": "jest",
-    "build": "rollup --config"
+    "build": "rollup --config",
+    "build:release": "rollup --config"
   },
   "repository": {
     "type": "git",

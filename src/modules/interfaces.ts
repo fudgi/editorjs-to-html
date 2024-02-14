@@ -74,6 +74,7 @@ export interface AlertBlock {
 export interface WarningBlock {
   message: string;
   title: string;
+  type?: string;
 }
 
 interface FileFormat {
