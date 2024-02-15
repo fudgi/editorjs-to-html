@@ -6,7 +6,7 @@ module.exports = {
     input: "./src/app.ts",
     output: {
         file: "./build/index.js",
-        format: "umd",
+        format: "cjs",
         name: "editorJSToHTML",
     },
     plugins: [
