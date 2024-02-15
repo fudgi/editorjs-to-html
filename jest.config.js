@@ -15,4 +15,7 @@ module.exports = {
     '!src/**/*.d.ts',
     '!src/**/*.d.mts',
   ],
+  transformIgnorePatterns: [
+    "node_modules/(?!@shikijs|shiki)"
+  ]
 };

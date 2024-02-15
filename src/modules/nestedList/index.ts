@@ -7,7 +7,7 @@ export function nestedList ({ data }: Props<ListBlock>) {
   const recursor = (items: ListItem[], listStyle: 'ul' | 'ol') => {
     const list = items.map((item) => {
       if (!item.content && !item.items) {
-        return `<li>HELLO${item}</li>`;
+        return `<li>${item}</li>`;
       }
       let list = '';
       if (item.items && item.items.length) {
@@ -15,10 +15,7 @@ export function nestedList ({ data }: Props<ListBlock>) {
       }
       return `<li class="cdx-nested-list__item">
                 <div class="cdx-nested-list__item-body">
-                  <div class="cdx-nested-list__item-content">${
-                    item.content || ''
-                  }</div>
-                  ${list}
+                  <div class="cdx-nested-list__item-content">${item.content || ''}</div>${list}
                 </div>
               </li>`;
     });

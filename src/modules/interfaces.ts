@@ -114,6 +114,7 @@ export interface ImageBlock {
 
 export interface CodeBlock {
   code: string;
+  language: string;
 }
 
 export interface DrawingBlock {
