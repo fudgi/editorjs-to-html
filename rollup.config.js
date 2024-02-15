@@ -10,11 +10,6 @@ module.exports = {
             name: "edjsParser",
         },
         {
-            file: "./build/Parser.esm.js",
-            format: "esm",
-            name: "edjsParser",
-        },
-        {
             file: "./build/Parser.browser.js",
             format: "iife",
             name: "edjsParser",
