@@ -11,6 +11,7 @@
         --cdx-warning-color: var(--bs-warning);
     }
 
+    margin-bottom: 1rem;
     display: flex;
     padding: 0;
     background-color: var(--bs-tertiary-bg);
@@ -40,6 +41,7 @@
     }
 
     &__title {
+        font-weight: bold;
         margin-bottom: 6px;
     }
 }
