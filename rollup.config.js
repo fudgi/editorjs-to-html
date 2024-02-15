@@ -4,17 +4,11 @@ const typescript = require("@rollup/plugin-typescript");
 
 module.exports = {
     input: "./src/app.ts",
-    output: [{
-            file: "./build/Parser.node.js",
-            format: "cjs",
-            name: "edjsParser",
-        },
-        {
-            file: "./build/Parser.browser.js",
-            format: "iife",
-            name: "edjsParser",
-        },
-    ],
+    output: {
+        file: "./build/index.js",
+        format: "umd",
+        name: "editorJSToHTML",
+    },
     plugins: [
         typescript(),
         babel(),
