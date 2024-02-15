@@ -1,6 +1,6 @@
 {
   "name": "@pocket-architect/editorjs-to-html",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "parse editorjs content format to html with saving editorjs markup format",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
