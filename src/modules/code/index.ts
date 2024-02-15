@@ -11,5 +11,5 @@ export function code ({ data }: Props<CodeBlock>) {
             light: 'min-light',
             dark: 'dark-plus',
         }
-    }).then((html: string) => baseBlock(`<div class="cdx-block ce-code"><div>${html}</div></div>`)));
+    }).then((html: string) => baseBlock(`<div class="cdx-block ce-code"><div class="border p-3">${html}</div></div>`)));
 }
