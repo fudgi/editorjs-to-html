@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { EmbedBlock, Props } from "../interfaces"
 import { baseBlock } from "../utils"
-import Services from "./services";
+import services from "./services";
 
 export function embed ({ data }: Props<EmbedBlock>) {
-  const { html } = Services[data.service];
+  const { html } = services[data.service];
 
-  let strResult = html;
+  let strResult = html(data);
   if (data.caption) {
     strResult += `<div class="embed-tool__caption">${data.caption}</div>`;
   }

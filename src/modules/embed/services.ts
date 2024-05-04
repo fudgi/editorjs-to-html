@@ -1,4 +1,6 @@
 /* eslint-disable no-useless-escape */
+import {EmbedBlock} from "../interfaces";
+
 export default {
   vimeo: {
     regex: /(?:http[s]?:\/\/)?(?:www.)?(?:player.)?vimeo\.co(?:.+\/([^\/]\d+)(?:#t=[\d]+)?s?$)/,
@@ -8,52 +10,9 @@ export default {
     width: 580,
   },
   youtube: {
-    regex: /(?:https?:\/\/)?(?:www\.)?(?:(?:youtu\.be\/)|(?:youtube\.com)\/(?:v\/|u\/\w\/|embed\/|watch))(?:(?:\?v=)?([^#&?=]*))?((?:[?&]\w*=\w*)*)/,
-    embedUrl: 'https://www.youtube.com/embed/<%= remote_id %>',
-    html: '<iframe style="width:100%;" height="320" frameborder="0" allowfullscreen></iframe>',
-    height: 320,
-    width: 580,
-    id: ([id, params]) => {
-      if (!params && id) {
-        return id;
-      }
-
-      const paramsMap = {
-        start: 'start',
-        end: 'end',
-        t: 'start',
-        // eslint-disable-next-line camelcase
-        time_continue: 'start',
-        list: 'list',
-      };
-
-      params = params.slice(1)
-        .split('&')
-        .map(param => {
-          const [name, value] = param.split('=');
-
-          if (!id && name === 'v') {
-            id = value;
-
-            return null;
-          }
-
-          if (!paramsMap[name]) {
-            return null;
-          }
-
-          if (value === 'LL'
-            || value.startsWith('RDMM')
-            || value.startsWith('FL')) {
-            return null;
-          }
-
-          return `${paramsMap[name]}=${value}`;
-        })
-        .filter(param => !!param);
-
-      return id + '?' + params.join('&');
-    },
+    // regex: /(?:https?:\/\/)?(?:www\.)?(?:(?:youtu\.be\/)|(?:youtube\.com)\/(?:v\/|u\/\w\/|embed\/|watch))(?:(?:\?v=)?([^#&?=]*))?((?:[?&]\w*=\w*)*)/,
+    // embedUrl: 'https://www.youtube.com/embed/<%= remote_id %>',
+    html: (props: EmbedBlock) => `<iframe style="width:100%;" height="${props.height}" src="${props.embed}" frameborder="0" allowfullscreen></iframe>`,
   },
   coub: {
     regex: /https?:\/\/coub\.com\/view\/([^\/\?\&]+)/,
