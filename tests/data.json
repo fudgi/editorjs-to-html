@@ -296,7 +296,8 @@
         "stretched": false,
         "withBackground": false
       }
-    }
+    },
+    {"id":"nhcgZ98Tgz","type":"embed","data":{"service":"youtube","source":"https://www.youtube.com/watch?v=yPEHb3Kvd4o","embed":"https://www.youtube.com/embed/yPEHb3Kvd4o","width":580,"height":320,"caption":"Test"}}
   ],
   "version": "2.29.0"
 }
