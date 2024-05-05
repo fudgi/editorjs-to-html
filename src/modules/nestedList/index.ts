@@ -20,7 +20,7 @@ export function nestedList ({ data }: Props<ListBlock>) {
               </li>`;
     });
 
-    return `<${listStyle} class="cdx-nested-list cdx-block cdx-nested-list--ordered">${list.join(
+    return `<${listStyle} class="cdx-nested-list cdx-block cdx-nested-list--${data.style}">${list.join(
       ''
     )}</${listStyle}>`;
   };
