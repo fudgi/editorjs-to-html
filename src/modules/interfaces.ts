@@ -1,26 +1,26 @@
 export type BlockType =
-    | 'list'
-    | 'header'
-    | 'paragraph'
-    | 'table'
-    | 'delimiter'
-    | 'alert'
-    | 'checklist'
-    | 'code'
-    | 'image'
-    | 'linkTool'
-    | 'quote'
-    | 'raw'
-    | 'warning';
+  | "list"
+  | "header"
+  | "paragraph"
+  | "table"
+  | "delimiter"
+  | "alertText"
+  | "checklist"
+  | "code"
+  | "image"
+  | "linkTool"
+  | "quote"
+  | "raw"
+  | "warning";
 
 export type AlignmentType =
-  | 'start'
-  | 'end'
-  | 'left'
-  | 'right'
-  | 'center'
-  | 'justify'
-  | 'inherit';
+  | "start"
+  | "end"
+  | "left"
+  | "right"
+  | "center"
+  | "justify"
+  | "inherit";
 
 interface Tunes {
   alignmentTune?: {
@@ -46,7 +46,7 @@ export interface ListItem {
 }
 
 export interface ListBlock {
-  style: 'ordered' | 'unordered';
+  style: "ordered" | "unordered";
   items: ListItem[];
 }
 
@@ -130,7 +130,7 @@ export interface LinkToolBlockMeta {
 
 export interface LinkToolBlock {
   link: string;
-  meta:LinkToolBlockMeta
+  meta: LinkToolBlockMeta;
 }
 
 export interface RawBlock {
@@ -159,7 +159,10 @@ export type BlockTuneData = any;
 
 export type BlockToolData<T extends object = any> = T;
 
-export interface OutputBlockData<Type extends string = string, Data extends object = any> {
+export interface OutputBlockData<
+  Type extends string = string,
+  Data extends object = any
+> {
   /**
    * Unique Id of the block
    */
@@ -176,9 +179,8 @@ export interface OutputBlockData<Type extends string = string, Data extends obje
   /**
    * Block Tunes data
    */
-  tunes?: {[name: string]: BlockTuneData};
+  tunes?: { [name: string]: BlockTuneData };
 }
-
 
 export interface OutputData {
   /**

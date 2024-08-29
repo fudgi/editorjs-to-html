@@ -4,7 +4,7 @@ import { header } from "./header";
 import { drawing } from "./drawing";
 import { nestedList } from "./nestedList";
 import { paragraph } from "./paragraph";
-import { alert } from "./alert";
+import { alertText } from "./alert";
 import { checklist } from "./checklist";
 import { image } from "./image";
 import { linkTool } from "./linkTool";
@@ -14,7 +14,7 @@ import { warning } from "./warning";
 import { embed } from "./embed";
 
 export const transformBlocks = {
-  alert,
+  alertText,
   checklist,
   delimiter,
   header,
