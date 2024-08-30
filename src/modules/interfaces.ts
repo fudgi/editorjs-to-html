@@ -112,6 +112,14 @@ export interface ImageBlock {
   file: File;
 }
 
+export interface SimpleImageBlock {
+  url: string;
+  caption: string;
+  withBorder: boolean;
+  withBackground: boolean;
+  stretched: boolean;
+}
+
 export interface CodeBlock {
   code: string;
   language: string;
